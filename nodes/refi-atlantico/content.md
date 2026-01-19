@@ -49,4 +49,4 @@ With its rich cultural and natural diversity, the Atlántico region provides the
 - **What’s Next:** ReFi Atlántico aims to become a leading ReFi hub in the Atlántico region, supporting and incubating new projects while growing its community.
 - **Why It Matters:** By becoming a role model, the node can inspire broader adoption of ReFi principles throughout Colombia and beyond.
 
-![GTtZK1bWYAARMMJ.jpeg](nodes/refi-atlantico/images/GTtZK1bWYAARMMJ.jpeg)
+![GTtZK1bWYAARMMJ.jpeg](nodes/refi-atlantico/images/refi-atlantico2.jpeg)

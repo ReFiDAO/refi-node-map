@@ -56,16 +56,16 @@ ReFi Mexico bridges grassroots regeneration and innovative digital frameworks. A
 - **What’s Coming:** Establish a hub for regenerative innovation, supporting grassroots funding mechanisms and attracting venture capital to scale impact solutions
 - **Why It Matters:** A regional hub amplifies ReFi Mexico’s influence and shares its tools with the global movement, accelerating the transition to regenerative economies.
 
-![GYB4CuWbIAAq3P9.jpeg](nodes/refi-mexico/images/GYB4CuWbIAAq3P9.jpeg)
+![GYB4CuWbIAAq3P9.jpeg](nodes/refi-mexico/images/refi-mexico6.jpeg)
 
-![Gd6kvO6bcAAMmlz.jpeg](nodes/refi-mexico/images/Gd6kvO6bcAAMmlz.jpeg)
+![Gd6kvO6bcAAMmlz.jpeg](nodes/refi-mexico/images/refi-mexico2.jpeg)
 
-![GYBzmgOb0AAG37z.jpeg](nodes/refi-mexico/images/GYBzmgOb0AAG37z.jpeg)
+![GYBzmgOb0AAG37z.jpeg](nodes/refi-mexico/images/refi-mexico7.jpeg)
 
-![GYB4CuWb0AQtnIK.jpeg](nodes/refi-mexico/images/GYB4CuWb0AQtnIK.jpeg)
+![GYB4CuWb0AQtnIK.jpeg](nodes/refi-mexico/images/refi-mexico5.jpeg)
 
-![GJrY6dNaYAA3SNo.jpeg](nodes/refi-mexico/images/GJrY6dNaYAA3SNo.jpeg)
+![GJrY6dNaYAA3SNo.jpeg](nodes/refi-mexico/images/refi-mexico4.jpeg)
 
-![GGttCPrWoAALuV8.jpeg](nodes/refi-mexico/images/GGttCPrWoAALuV8.jpeg)
+![GGttCPrWoAALuV8.jpeg](nodes/refi-mexico/images/refi-mexico3.jpeg)
 
-![GCdJeLzbIAARj8i.jpeg](nodes/refi-mexico/images/GCdJeLzbIAARj8i.jpeg)
+![GCdJeLzbIAARj8i.jpeg](nodes/refi-mexico/images/refi-mexico1.jpeg)

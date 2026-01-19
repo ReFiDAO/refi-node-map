@@ -40,7 +40,7 @@ Rather than starting from scratch, ReFi Barcelona integrates into existing commu
     - **Giveth** (a hub for Web3 public goods).
 - **Why It Matters:** These partnerships enable ReFi Barcelona to leverage resources, expertise, and networks, amplifying its impact while grounding it in local and global ecosystems.
 
-![F1z0YbgWIAETCCQ.jpeg](nodes/refi-barcelona/images/F1z0YbgWIAETCCQ.jpeg)
+![F1z0YbgWIAETCCQ.jpeg](nodes/refi-barcelona/images/refi-barcelona2.jpeg)
 
 ## Vision for 2025
 
@@ -64,4 +64,4 @@ Rather than starting from scratch, ReFi Barcelona integrates into existing commu
 - **What’s Coming:** Collaborate with financial cooperatives in Catalonia to integrate global ReFi resources into local support systems, expanding access to capital for regenerative initiatives.
 - **Why It Matters:** By bridging traditional cooperative models with Web3 tools, ReFi Barcelona can amplify the reach and efficacy of local financial systems, creating a blueprint for regenerative finance in other regions.
 
-![GVXJdRNWMAEXKd0.jpeg](nodes/refi-barcelona/images/GVXJdRNWMAEXKd0.jpeg)
+![GVXJdRNWMAEXKd0.jpeg](nodes/refi-barcelona/images/refi-barcelona3.jpeg)

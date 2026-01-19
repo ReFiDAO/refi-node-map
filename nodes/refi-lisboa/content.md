@@ -8,7 +8,7 @@ Lisbon—where old-world charm coexists with a world-class tech scene—was the 
 
 ReFi Lisboa is a living bridge between the historical pulse of Lisbon and the cutting edge of Web3 innovation. It’s a space where old café chatter collides with new blockchain ideas, and where the ReFi ethos embraces artists, tech entrepreneurs, refugees, and grassroots changemakers alike. By infusing local traditions—like open-air gatherings and neighborly storytelling—into futuristic tech experiments, ReFi Lisboa proves that regeneration isn’t just a concept; it’s a way of life that can unite a deeply diverse community in crafting more sustainable, inclusive futures.
 
-![GJXAUszX0AAKl7c.jpeg](nodes/refi-lisboa/images/cover.png)
+![cover.jpeg](nodes/refi-lisboa/images/cover.jpeg)
 
 ## 2024 Highlights
 
@@ -19,11 +19,11 @@ This year, ReFi Lisboa has focused on recalibrating and refining its approach, p
 - **What Happened:** Partnering with the Lisbon Project, ReFi Lisboa introduced blockchain basics and ReFi principles to immigrants and refugees, opening doors to financial literacy and empowerment.
 - **Why It Matters:** This effort is the first step in a long-term plan to democratize ReFi knowledge—from schools and universities to local accelerators—especially for those who’ve historically been left out.
     
-    ![IMG_1628.jpeg](nodes/refi-lisboa/images/IMG_1628.jpeg)
+    ![IMG_1628.jpeg](nodes/refi-lisboa/images/refi-lisboa8.jpeg)
     
-    ![1729698799648.jpeg](nodes/refi-lisboa/images/1729698799648.jpeg)
+    ![7546ec97-1d42-489d-a727-71d888341504.png](nodes/refi-lisboa/images/refi-lisboa5.png)
     
-    ![1729698814514.jpeg](nodes/refi-lisboa/images/1729698814514.jpeg)
+    ![1729698814514.jpeg](nodes/refi-lisboa/images/refi-lisboa2.jpeg)
     
 
 ### Collaboration with Kaospilot Students
@@ -31,9 +31,9 @@ This year, ReFi Lisboa has focused on recalibrating and refining its approach, p
 - **What Happened:** Kaospilot students brought their strategic expertise to help ReFi Lisboa reimagine its ecosystem and refine its approach.
 - **Why It Matters:** Fresh perspectives from this partnership have equipped the node with innovative frameworks for long-term growth.
     
-    ![1734473205601.jpeg](nodes/refi-lisboa/images/1734473205601.jpeg)
+    ![1734473205601.jpeg](nodes/refi-lisboa/images/refi-lisboa4.jpeg)
     
-    ![1734473205528.jpeg](nodes/refi-lisboa/images/1734473205528.jpeg)
+    ![1734473205528.jpeg](nodes/refi-lisboa/images/refi-lisboa3.jpeg)
     
 
 ### Event “Where Is ReFi on the Next Bull Run?”
@@ -41,7 +41,7 @@ This year, ReFi Lisboa has focused on recalibrating and refining its approach, p
 - **What Happened:** ReFi Lisboa hosted an expert panel discussion diving into the future of regenerative finance during the next bull run. Together with Celo Europe, the event explored how ReFi could seize opportunities, navigate challenges, and craft strategies in a bullish market.
 - **Why It Matters:** It also showcased ReFi’s ability to align economic growth with environmental regeneration, highlighting its unique potential in shaping a sustainable financial future.
     
-    ![GJXAUsoWgAAuf66.jpeg](nodes/refi-lisboa/images/GJXAUsoWgAAuf66.jpeg)
+    ![GJXAUsoWgAAuf66.jpeg](nodes/refi-lisboa/images/refi-lisboa6.jpeg)
     
 
 ### Igniting the nature-backed economy hackathon
@@ -49,7 +49,7 @@ This year, ReFi Lisboa has focused on recalibrating and refining its approach, p
 - **What Happened:** Spearheaded by Traditional Dream Factory, ReFi Lisboa supported a ReFi hackathon aimed at advancing the tools and infrastructure for land-based DAOs, community land trusts, and commons-based governance systems. With a reward pool exceeding €15,000, this event attracted builders eager to leverage Web3 technology to empower communities in accessing, governing, and regenerating shared resources.
 - **Why It Matters:** This hackathon directly supported local projects and partners by fostering innovation and rewarding the community’s efforts. It was a win for both local stakeholders and the broader regenerative movement.
     
-    ![GQHe7ZOW0AAw3Br.jpeg](nodes/refi-lisboa/images/GQHe7ZOW0AAw3Br.jpeg)
+    ![GQHe7ZOW0AAw3Br.jpeg](nodes/refi-lisboa/images/refi-lisboa7.jpeg)
     
 
 ## Vision for 2025

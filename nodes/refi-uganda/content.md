@@ -48,12 +48,12 @@ ReFi Uganda is not just about finance; it’s about creating a **sociocratic, co
 - **What’s coming:** ReFi Uganda will pilot a local carbon credit market, enabling businesses and individuals to offset their emissions through community-based projects.
 - **Why it matters:** This initiative not only provides a new revenue stream for rural communities but also incentivizes sustainable practices at a local level, bridging the gap between global climate goals and local action.
 
-![IMG_20221001_113919_384 (1).jpg](<nodes/refi-uganda/images/IMG_20221001_113919_384_(1).jpg>)
+![IMG_20221001_113919_384 (1).jpg](<nodes/refi-uganda/images/refi-uganda4.jpg>)
 
-![IMG_20221001_091731_324.jpg](nodes/refi-uganda/images/IMG_20221001_091731_324.jpg)
+![IMG_20221001_091731_324.jpg](nodes/refi-uganda/images/refi-uganda3.jpg)
 
-![GVA5PQnXcAAgdr5.jpeg](nodes/refi-uganda/images/GVA5PQnXcAAgdr5.jpeg)
+![GVA5PQnXcAAgdr5.jpeg](nodes/refi-uganda/images/refi-uganda2.jpeg)
 
-![Screenshot_20221004-104330_1.jpg](nodes/refi-uganda/images/Screenshot_20221004-104330_1.jpg)
+![Screenshot_20221004-104330_1.jpg](nodes/refi-uganda/images/refi-uganda5.jpg)
 
-![Fx-5TNtX0AILmIn.jpeg](nodes/refi-uganda/images/Fx-5TNtX0AILmIn.jpeg)
+![Fx-5TNtX0AILmIn.jpeg](nodes/refi-uganda/images/refi-uganda1.jpeg)

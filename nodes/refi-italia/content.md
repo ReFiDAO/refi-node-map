@@ -57,6 +57,6 @@ This node is not just about ecological restoration—it’s about weaving regene
 - **What’s Coming:** ReFi Italia will focus on fostering a cultural shift by embedding regenerative principles into everyday life through education, art, and community engagement.
 - **Why It Matters:** Long-lasting change requires a cultural transformation that inspires individuals and communities to live more sustainably.
 
-![GbHpGqZXQAAa3K0.jpeg](nodes/refi-italia/images/GbHpGqZXQAAa3K0.jpeg)
+![GbHpGqZXQAAa3K0.jpeg](nodes/refi-italia/images/refi-italia1.jpeg)
 
-![GSMmkRNWAAAXc_Q.jpeg](nodes/refi-italia/images/GSMmkRNWAAAXc_Q.jpeg)
+![GSMmkRNWAAAXc_Q.jpeg](nodes/refi-italia/images/refi-italia2.jpeg)

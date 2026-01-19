@@ -245,7 +245,7 @@ a {
 /* SCROLL INDICATOR */
 .scroll-indicator {
     position: absolute;
-    bottom: 5rem;
+    bottom: calc(3rem);
     left: 0;
     right: 0;
     margin-inline: auto;
@@ -379,51 +379,156 @@ a {
 
 .pin {
     position: absolute;
-    transform: translate(calc(-50% + var(--pin-offset-x, 0px)), calc(-100% + var(--pin-offset-y, 0px)));
+    transform: translate(calc(-50% + var(--pin-offset-x, 0px)), calc(-50% + var(--pin-offset-y, 0px)));
     pointer-events: auto;
     cursor: pointer;
     border: 0;
     background: transparent;
     padding: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pin:hover,
+.pin:focus-visible {
+    z-index: 10;
 }
 
 .pin__bubble {
+    position: absolute;
+    left: calc(100% + 8px);
+    top: 50%;
+    transform: translateY(-50%) translateX(-6px) scale(0.98);
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
     background: rgba(17, 24, 29, 0.85);
     border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 999px;
-    padding: 0.5rem 0.75rem;
+    border-radius: 14px;
+    padding: 0.65rem 0.95rem;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(6px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pin__bubble::after {
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    transform: translateY(-50%) rotate(45deg);
+    background: rgba(17, 24, 29, 0.85);
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 2px;
 }
 
 .pin__dot {
-    width: 10px;
-    height: 10px;
+    width: 14px;
+    height: 14px;
     border-radius: 999px;
     background: url('assets/ReFi_Logomark.svg') center / cover no-repeat;
-    border: none;
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35), 0 0 0 4px rgba(69, 113, 225, 0.12);
+    position: relative;
+    transform: scale(1.4);
+    transition: transform 0.2s ease;
+}
+.pin:hover .pin__dot,
+.pin:focus-visible .pin__dot {
+    transform: scale(1.55);
+}
+
+.pin__dot::after {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    opacity: 0.9;
+}
+
+.pin__dot::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+}
+.pin__title {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.pin__flag {
+    font-size: 0.95rem;
+    line-height: 1;
 }
 
 .pin__label {
     font-family: var(--font-sans);
-    font-size: 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 600;
     color: rgba(241, 240, 255, 0.9);
     white-space: nowrap;
 }
 
+.pin__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    color: rgba(241, 240, 255, 0.65);
+    font-size: 0.7rem;
+}
+
+.pin__metaRow {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    white-space: nowrap;
+}
+
+.pin__metaLabel {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.55rem;
+    color: rgba(241, 240, 255, 0.45);
+}
+
+.pin__metaValue {
+    font-size: 0.72rem;
+    color: rgba(241, 240, 255, 0.75);
+}
 .pin__stem {
     margin: 0 auto;
     width: 2px;
     height: 14px;
     background: rgba(255, 255, 255, 0.25);
     border-radius: 999px;
+    display: none;
 }
 
-.pin:hover .pin__dot {
-    animation: pinPulse 1.6s ease-in-out infinite;
+.pin__dot {
+    animation: pinPulse 2.4s ease-in-out infinite;
+}
+
+.pin:hover .pin__bubble,
+.pin:focus-visible .pin__bubble {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0) scale(1);
 }
 
 .pin.is-tour-current .pin__bubble {
@@ -433,17 +538,14 @@ a {
 
 @keyframes pinPulse {
     0% {
-        transform: scale(1);
         box-shadow: 0 0 0 0 rgba(113, 227, 186, 0.2);
     }
 
     60% {
-        transform: scale(1.05);
         box-shadow: 0 0 0 10px rgba(113, 227, 186, 0);
     }
 
     100% {
-        transform: scale(1);
         box-shadow: 0 0 0 0 rgba(113, 227, 186, 0);
     }
 }

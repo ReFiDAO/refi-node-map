@@ -58,14 +58,14 @@ By combining education, community engagement, and tangible reforestation actions
 - **What’s Coming:** Register ReFi Lagos as an NGO to streamline operations and attract larger funding opportunities. Deepen collaborations with local and international partners to strengthen the node’s ecosystem.
 - **Why It Matters:** A formal structure ensures transparency, accountability, and scalability, while stronger partnerships unlock new opportunities for growth and impact.
 
-![GfKcZSxWAAAV4bJ.jpeg](nodes/refi-lagos/images/GfKcZSxWAAAV4bJ.jpeg)
+![GfKcZSxWAAAV4bJ.jpeg](nodes/refi-lagos/images/refi-lagos2.jpeg)
 
-![GfKcJQZXoAACbtE.jpeg](nodes/refi-lagos/images/GfKcJQZXoAACbtE.jpeg)
+![GfKcJQZXoAACbtE.jpeg](nodes/refi-lagos/images/refi-lagos1.jpeg)
 
-![GgiUSWxXUAAf_Vt.jpeg](nodes/refi-lagos/images/GgiUSWxXUAAf_Vt.jpeg)
+![GgiUSWxXUAAf_Vt.jpeg](nodes/refi-lagos/images/refi-lagos5.jpeg)
 
-![GfKdAKHWMAAj1yh.jpeg](nodes/refi-lagos/images/GfKdAKHWMAAj1yh.jpeg)
+![GfKdAKHWMAAj1yh.jpeg](nodes/refi-lagos/images/refi-lagos3.jpeg)
 
-![GfKX_bvWUAAke5i.jpeg](nodes/refi-lagos/images/GfKX_bvWUAAke5i.jpeg)
+![GfKX_bvWUAAke5i.jpeg](nodes/refi-lagos/images/refi-lagos4.jpeg)
 
-![GRK5b55XAAALoOz.jpeg](nodes/refi-lagos/images/GRK5b55XAAALoOz.jpeg)
+![GRK5b55XAAALoOz.jpeg](nodes/refi-lagos/images/refi-lagos6.jpeg)

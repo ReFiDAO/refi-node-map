@@ -53,18 +53,18 @@ Its emphasis on blending local culture with Web3 tools, such as community curren
 - **What’s Coming:** ReFi Tanzania aims to fully integrate DAO-based governance into all its projects, ensuring community participation in decision-making and resource allocation.
 - **Why It Matters:** Transparent, decentralized governance fosters trust and efficiency, enabling the node to scale its operations while staying true to its community-first ethos.
 
-![GMU_DmlWcAA8AJF.jpeg](nodes/refi-tanzania/images/GMU_DmlWcAA8AJF.jpeg)
+![GMU_DmlWcAA8AJF.jpeg](nodes/refi-tanzania/images/refi-tanzania3.jpeg)
 
-![women ldpe.jpg](nodes/refi-tanzania/images/women_ldpe.jpg)
+![women ldpe.jpg](nodes/refi-tanzania/images/refi-tanzania8.jpg)
 
-![GOaaOXaWUAAOMt_.jpeg](nodes/refi-tanzania/images/GOaaOXaWUAAOMt_.jpeg)
+![GOaaOXaWUAAOMt_.jpeg](nodes/refi-tanzania/images/refi-tanzania5.jpeg)
 
-![GL_oNpgXsAAG7ez.jpeg](nodes/refi-tanzania/images/GL_oNpgXsAAG7ez.jpeg)
+![GL_oNpgXsAAG7ez.jpeg](nodes/refi-tanzania/images/refi-tanzania2.jpeg)
 
-![GMU_L2VW4AAjNzP.jpeg](nodes/refi-tanzania/images/GMU_L2VW4AAjNzP.jpeg)
+![GMU_L2VW4AAjNzP.jpeg](nodes/refi-tanzania/images/refi-tanzania4.jpeg)
 
-![IMAGE-2024-08-02-16-07-51.jpg](nodes/refi-tanzania/images/IMAGE-2024-08-02-16-07-51.jpg)
+![IMAGE-2024-08-02-16-07-51.jpg](nodes/refi-tanzania/images/refi-tanzania6.jpg)
 
-![merimeri point.jpg](nodes/refi-tanzania/images/merimeri_point.jpg)
+![merimeri point.jpg](nodes/refi-tanzania/images/refi-tanzania7.jpg)
 
-![dApp userflow copy.png](nodes/refi-tanzania/images/dApp_userflow_copy.png)
+![dApp userflow copy.png](nodes/refi-tanzania/images/refi-tanzania1.png)

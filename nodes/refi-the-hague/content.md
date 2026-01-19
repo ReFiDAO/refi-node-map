@@ -46,6 +46,6 @@ ReFi The Hague stands out for its fusion of technological innovation and communi
 - **What’s coming:** The node aims to establish its own legal foundation, separate from Viable Community, and secure partnerships with local and EU grant programs.
 - **Why it matters:** A dedicated legal entity will enhance transparency, attract funding, and solidify the node’s presence as a trusted community partner. Strategic partnerships will amplify its capacity to deliver impactful projects.
 
-![1730291238867.jpeg](nodes/refi-the-hague/images/1730291238867.jpeg)
+![1730291238867.jpeg](nodes/refi-the-hague/images/refi-the-hague1.jpeg)
 
-![IMG_1054~2.JPG](nodes/refi-the-hague/images/IMG_10542.jpg)
+![IMG_1054~2.JPG](nodes/refi-the-hague/images/refi-the-hague2.jpg)

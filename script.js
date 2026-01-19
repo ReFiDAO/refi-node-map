@@ -106,7 +106,6 @@ function renderMarkdown(md) {
             if (!src) return;
             html += `<figure class="node-media">
                 <img class="node-media__img" src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy" />
-                ${alt ? `<figcaption class="node-media__caption">${escapeHtml(alt)}</figcaption>` : ""}
             </figure>`;
             return;
         }
@@ -132,7 +131,8 @@ function renderNodeMeta(node) {
     const items = [
         { label: "Location", value: node.location },
         { label: "Lead Stewards", value: node.leadStewards },
-        { label: "Node Stage", value: node.nodeStage }
+        { label: "Node Stage", value: node.nodeStage },
+        { label: "Last Update", value: node.lastUpdate }
     ];
     const html = items
         .filter((item) => item.value)
@@ -165,6 +165,36 @@ function getContinentLabel(node) {
         return "South America";
     }
     return "Unknown";
+}
+
+const FLAG_BY_ID = {
+    "refi-belo-horizonte": "🇧🇷",
+    "refi-bogota": "🇨🇴",
+    "refi-cape-town": "🇿🇦",
+    "refi-colombia": "🇨🇴",
+    "refi-phangan": "🇹🇭",
+    "refi-red-hook": "🇺🇸",
+    "refi-the-hague": "🇳🇱",
+    "refi-venezuela": "🇻🇪",
+    "refi-atlantico": "🇨🇴",
+    "refi-barcelona": "🇪🇸",
+    "refi-bay-area": "🇺🇸",
+    "refi-costa-rica": "🇨🇷",
+    "refi-italia": "🇮🇹",
+    "refi-lagos": "🇳🇬",
+    "refi-lisboa": "🇵🇹",
+    "refi-medellin": "🇨🇴",
+    "refi-mexico": "🇲🇽",
+    "refi-portland": "🇺🇸",
+    "refi-tanzania": "🇹🇿",
+    "refi-tulum": "🇲🇽",
+    "refi-uganda": "🇺🇬",
+    "rifai-sicilia": "🇮🇹"
+};
+
+function getFlagEmoji(node) {
+    if (!node) return "🌍";
+    return FLAG_BY_ID[node.id] || "🌍";
 }
 
 function setModalLogo(modalLogo, node) {
@@ -333,85 +363,37 @@ function nodePoint(node) {
         mapPins.innerHTML = nodes
             .map((node) => {
                 const { xPct, yPct } = nodePoint(node);
+                const location = node.location || "TBD";
+                const stage = node.nodeStage || "TBD";
+                const lastUpdate = node.lastUpdate || "TBD";
+                const flag = getFlagEmoji(node);
                 return `
                     <button class="pin" type="button" data-node-id="${escapeHtml(node.id)}" style="left:${xPct}%; top:${yPct}%;">
-                        <div class="pin__bubble">
-                            <span class="pin__dot" aria-hidden="true"></span>
-                            <span class="pin__label">${escapeHtml(node.name)}</span>
+                        <span class="pin__dot" aria-hidden="true"></span>
+                        <div class="pin__bubble" aria-hidden="true">
+                            <div class="pin__title">
+                                <span class="pin__flag" aria-hidden="true">${escapeHtml(flag)}</span>
+                                <span class="pin__label">${escapeHtml(node.name)}</span>
+                            </div>
+                            <div class="pin__meta">
+                                <div class="pin__metaRow">
+                                    <span class="pin__metaLabel">Location</span>
+                                    <span class="pin__metaValue">${escapeHtml(location)}</span>
+                                </div>
+                                <div class="pin__metaRow">
+                                    <span class="pin__metaLabel">Stage</span>
+                                    <span class="pin__metaValue">${escapeHtml(stage)}</span>
+                                </div>
+                                <div class="pin__metaRow">
+                                    <span class="pin__metaLabel">Last Update</span>
+                                    <span class="pin__metaValue">${escapeHtml(lastUpdate)}</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="pin__stem" aria-hidden="true"></div>
                     </button>
                 `;
             })
             .join("");
-    }
-
-    function setPinOffset(pin, x, y) {
-        pin.style.setProperty("--pin-offset-x", `${x}px`);
-        pin.style.setProperty("--pin-offset-y", `${y}px`);
-        pin.dataset.offsetX = String(x);
-        pin.dataset.offsetY = String(y);
-    }
-
-    function resolvePinOverlaps() {
-        const pins = Array.from(mapPins.querySelectorAll(".pin"));
-        if (pins.length < 2) return;
-
-        pins.forEach((pin) => setPinOffset(pin, 0, 0));
-
-        const maxIterations = 320;
-        const nudgeStep = 8;
-        const maxOffset = 90;
-
-        for (let iter = 0; iter < maxIterations; iter += 1) {
-            let moved = false;
-            for (let i = 0; i < pins.length; i += 1) {
-                const a = pins[i].querySelector(".pin__bubble");
-                if (!a) continue;
-                const aRect = a.getBoundingClientRect();
-                for (let j = i + 1; j < pins.length; j += 1) {
-                    const b = pins[j].querySelector(".pin__bubble");
-                    if (!b) continue;
-                    const bRect = b.getBoundingClientRect();
-                    const overlaps = !(
-                        aRect.right < bRect.left ||
-                        aRect.left > bRect.right ||
-                        aRect.bottom < bRect.top ||
-                        aRect.top > bRect.bottom
-                    );
-                    if (!overlaps) continue;
-
-                    const aCenterX = aRect.left + aRect.width / 2;
-                    const aCenterY = aRect.top + aRect.height / 2;
-                    const bCenterX = bRect.left + bRect.width / 2;
-                    const bCenterY = bRect.top + bRect.height / 2;
-                    const dx = bCenterX - aCenterX || 1;
-                    const dy = bCenterY - aCenterY || 1;
-                    const length = Math.hypot(dx, dy) || 1;
-                    const moveX = (dx / length) * nudgeStep;
-                    const moveY = (dy / length) * nudgeStep;
-
-                    const aCurrentX = Number(pins[i].dataset.offsetX || 0);
-                    const aCurrentY = Number(pins[i].dataset.offsetY || 0);
-                    const bCurrentX = Number(pins[j].dataset.offsetX || 0);
-                    const bCurrentY = Number(pins[j].dataset.offsetY || 0);
-                    const aNextX = clamp(aCurrentX - moveX, -maxOffset, maxOffset);
-                    const aNextY = clamp(aCurrentY - moveY, -maxOffset, maxOffset);
-                    const bNextX = clamp(bCurrentX + moveX, -maxOffset, maxOffset);
-                    const bNextY = clamp(bCurrentY + moveY, -maxOffset, maxOffset);
-
-                    if (aNextX !== aCurrentX || aNextY !== aCurrentY) {
-                        setPinOffset(pins[i], aNextX, aNextY);
-                        moved = true;
-                    }
-                    if (bNextX !== bCurrentX || bNextY !== bCurrentY) {
-                        setPinOffset(pins[j], bNextX, bNextY);
-                        moved = true;
-                    }
-                }
-            }
-            if (!moved) break;
-        }
     }
 
     function renderNodeGrid() {
@@ -705,23 +687,10 @@ function nodePoint(node) {
     }
 
     renderPins();
-    requestAnimationFrame(resolvePinOverlaps);
     renderFilters();
     renderNodeGrid();
     setAdminMode(false);
     updateTourUI();
-
-    window.addEventListener("resize", () => {
-        requestAnimationFrame(resolvePinOverlaps);
-    });
-
-    window.addEventListener("load", () => {
-        requestAnimationFrame(resolvePinOverlaps);
-    });
-
-    if (document.fonts && document.fonts.ready) {
-        document.fonts.ready.then(() => requestAnimationFrame(resolvePinOverlaps));
-    }
 }
 
 document.addEventListener("DOMContentLoaded", main);

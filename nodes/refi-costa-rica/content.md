@@ -54,8 +54,8 @@ ReFi Costa Rica merges digital innovation with deep ecological wisdom. In a nati
 1. **What’s Coming:** Piloting local tokens and frameworks that tie economic growth directly to ecological health.
 2. **Why It Matters:** Moves from theory to action, ensuring that regenerative finance isn’t just an idea but a practical tool for improving livelihoods and landscapes.
 
-![GWrRhQiWgAAThJK.jpeg](nodes/refi-costa-rica/images/GWrRhQiWgAAThJK.jpeg)
+![GWrRhQiWgAAThJK.jpeg](nodes/refi-costa-rica/images/refi-costa-rica1.jpeg)
 
-![GWrRjfDX0AApmQO.jpeg](nodes/refi-costa-rica/images/GWrRjfDX0AApmQO.jpeg)
+![GWrRjfDX0AApmQO.jpeg](nodes/refi-costa-rica/images/refi-costa-rica3.jpeg)
 
-![GWrRhSpXsAAiNIL.jpeg](nodes/refi-costa-rica/images/GWrRhSpXsAAiNIL.jpeg)
+![GWrRhSpXsAAiNIL.jpeg](nodes/refi-costa-rica/images/refi-costa-rica2.jpeg)

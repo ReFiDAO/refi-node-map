@@ -58,4 +58,4 @@ What truly distinguishes ReFi Bay Area is its focus on **high-ticket real estate
 - **What’s Coming:** ReFi Bay Area will focus on building a reliable team with the skills needed to execute its ambitious projects and host community events.
 - **Why It Matters:** A strong team is essential for scaling operations, increasing community engagement, and ensuring the successful execution of the node’s vision.
 
-![GbARk1saoAA5jP7.jpeg](nodes/refi-bay-area/images/GbARk1saoAA5jP7.jpeg)
+![GbARk1saoAA5jP7.jpeg](nodes/refi-bay-area/images/refi-bay-area1.jpeg)

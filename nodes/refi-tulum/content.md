@@ -58,18 +58,18 @@ Despite the challenges of a transient population and stretched resources, ReFi T
 - **What’s Coming:** Establish a clear DAO or governance structure to streamline decision-making, allocate resources, and create transparency for contributors and partners.
 - **Why It Matters:** A formal structure will provide clarity, accountability, and the foundation needed to attract funding, scale operations, and manage projects effectively.
 
-![GMlPVdgXIAAMCc5.jpeg](nodes/refi-tulum/images/GMlPVdgXIAAMCc5.jpeg)
+![GMlPVdgXIAAMCc5.jpeg](nodes/refi-tulum/images/refi-tulum6.jpeg)
 
-![Gem4LJiXUAAhnnO.jpeg](nodes/refi-tulum/images/Gem4LJiXUAAhnnO.jpeg)
+![Gem4LJiXUAAhnnO.jpeg](nodes/refi-tulum/images/refi-tulum4.jpeg)
 
-![GLkzCpoXoAACejH.jpeg](nodes/refi-tulum/images/GLkzCpoXoAACejH.jpeg)
+![GLkzCpoXoAACejH.jpeg](nodes/refi-tulum/images/refi-tulum5.jpeg)
 
-![GbtVACPWsAUwQ9l.jpeg](nodes/refi-tulum/images/GbtVACPWsAUwQ9l.jpeg)
+![GbtVACPWsAUwQ9l.jpeg](nodes/refi-tulum/images/refi-tulum3.jpeg)
 
-![GbboD39awAAhe6R.jpeg](nodes/refi-tulum/images/GbboD39awAAhe6R.jpeg)
+![GbboD39awAAhe6R.jpeg](nodes/refi-tulum/images/refi-tulum2.jpeg)
 
-![GbboAFxakAElwJw.jpeg](nodes/refi-tulum/images/GbboAFxakAElwJw.jpeg)
+![GbboAFxakAElwJw.jpeg](nodes/refi-tulum/images/refi-tulum1.jpeg)
 
-![GWyp94fXQAEYeqr.jpeg](nodes/refi-tulum/images/GWyp94fXQAEYeqr.jpeg)
+![GWyp94fXQAEYeqr.jpeg](nodes/refi-tulum/images/refi-tulum7.jpeg)
 
-![GYLl0fyX0AAVJVi.jpeg](nodes/refi-tulum/images/GYLl0fyX0AAVJVi.jpeg)
+![GYLl0fyX0AAVJVi.jpeg](nodes/refi-tulum/images/refi-tulum8.jpeg)
