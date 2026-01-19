@@ -1,0 +1,1 @@
+![image.png](nodes/refi-belo-horizonte/images/cover.png)
