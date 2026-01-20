@@ -229,6 +229,39 @@ function setModalLogo(modalLogo, node) {
     tryNext();
 }
 
+function setCoverImage(targetImg, node) {
+    const nodeId = node && node.id ? String(node.id) : "";
+    if (!nodeId || !targetImg) {
+        return false;
+    }
+    const base = `nodes/${nodeId}/images/cover`;
+    const extensions = ["png", "jpg", "jpeg", "webp", "gif", "svg"];
+    let idx = 0;
+
+    const tryNext = () => {
+        if (idx >= extensions.length) {
+            targetImg.hidden = true;
+            targetImg.removeAttribute("src");
+            return;
+        }
+        const ext = extensions[idx++];
+        targetImg.src = `${base}.${ext}`;
+        targetImg.hidden = false;
+    };
+
+    targetImg.alt = `${node.name || "Node"} cover`;
+    targetImg.onload = () => {
+        targetImg.hidden = false;
+        const parent = targetImg.closest(".node-card__media");
+        if (parent) parent.classList.remove("is-empty");
+    };
+    targetImg.onerror = () => {
+        tryNext();
+    };
+    tryNext();
+    return true;
+}
+
 function main() {
     const nodes = Array.isArray(window.__NODE_DATA__) ? window.__NODE_DATA__ : [];
 
@@ -344,11 +377,17 @@ function nodePoint(node) {
             yPct: clamp(point.yPct + MAP_Y_OFFSET_PCT, 0, 100)
         };
     }
-    if (Number.isFinite(node.xPct) && Number.isFinite(node.yPct)) {
-        return {
-            xPct: node.xPct,
-            yPct: clamp(node.yPct + MAP_Y_OFFSET_PCT, 0, 100)
-        };
+    if (typeof node.mapCoordinates === "string") {
+        const matchX = node.mapCoordinates.match(/xPct\s*:\s*([0-9.]+)/i);
+        const matchY = node.mapCoordinates.match(/yPct\s*:\s*([0-9.]+)/i);
+        const x = matchX ? Number(matchX[1]) : NaN;
+        const y = matchY ? Number(matchY[1]) : NaN;
+        if (Number.isFinite(x) && Number.isFinite(y)) {
+            return {
+                xPct: x,
+                yPct: clamp(y + MAP_Y_OFFSET_PCT, 0, 100)
+            };
+        }
     }
     return { xPct: 50, yPct: 50 };
 }
@@ -404,13 +443,11 @@ function nodePoint(node) {
         nodeGrid.innerHTML = filtered
             .map((node) => {
                 const location = node.location ? node.location : "Location TBD";
-                const imgMatch = String(node.content || "").match(/!\[[^\]]*\]\(([^)]+)\)/);
-                const coverSrc = imgMatch ? sanitizeImageSrc(imgMatch[1]) : "";
                 const metaLine = location;
                 return `
                     <article class="node-card" data-node-id="${escapeHtml(node.id)}">
-                        <div class="node-card__media ${coverSrc ? "" : "is-empty"}">
-                            ${coverSrc ? `<img class="node-card__img" src="${escapeHtml(coverSrc)}" alt="${escapeHtml(node.name)}" loading="lazy" />` : ""}
+                        <div class="node-card__media is-empty">
+                            <img class="node-card__img" data-cover-node-id="${escapeHtml(node.id)}" alt="" loading="lazy" hidden />
                         </div>
                         <div class="node-card__body">
                             <div class="node-title">${escapeHtml(node.name)}</div>
@@ -420,6 +457,15 @@ function nodePoint(node) {
                 `;
             })
             .join("");
+    }
+
+    function hydrateCoverImages() {
+        const coverImages = Array.from(nodeGrid.querySelectorAll("[data-cover-node-id]"));
+        coverImages.forEach((img) => {
+            const node = nodes.find((n) => n.id === img.dataset.coverNodeId);
+            if (!node) return;
+            setCoverImage(img, node);
+        });
     }
 
     function renderFilters() {
@@ -534,20 +580,14 @@ function nodePoint(node) {
         state.activeNodeId = nodeId;
         modalTitle.textContent = node.name;
         setModalLogo(modalLogo, node);
+        setCoverImage(modalHeroImg, node);
         const metaHtml = renderNodeMeta(node);
         modalMeta.innerHTML = metaHtml;
         modalMeta.hidden = !metaHtml;
         modalContent.innerHTML = "<p class=\"muted\">Loading...</p>";
         openModal();
         if (window.location.protocol === "file:" && node.content) {
-            const { url, alt } = extractFirstImage(node.content);
-            if (url) {
-                modalHeroImg.src = url;
-                modalHeroImg.alt = alt || node.name;
-                modalHero.hidden = false;
-            } else {
-                modalHero.hidden = true;
-            }
+            modalHero.hidden = !modalHeroImg.src;
             modalContent.innerHTML = renderMarkdown(node.content);
             return;
         }
@@ -557,25 +597,11 @@ function nodePoint(node) {
                 throw new Error(`Failed to load ${node.mdPath}`);
             }
             const md = await res.text();
-            const { url, alt } = extractFirstImage(md);
-            if (url) {
-                modalHeroImg.src = url;
-                modalHeroImg.alt = alt || node.name;
-                modalHero.hidden = false;
-            } else {
-                modalHero.hidden = true;
-            }
+            modalHero.hidden = !modalHeroImg.src;
             modalContent.innerHTML = renderMarkdown(md);
         } catch (err) {
             if (node.content) {
-                const { url, alt } = extractFirstImage(node.content);
-                if (url) {
-                    modalHeroImg.src = url;
-                    modalHeroImg.alt = alt || node.name;
-                    modalHero.hidden = false;
-                } else {
-                    modalHero.hidden = true;
-                }
+                modalHero.hidden = !modalHeroImg.src;
                 modalContent.innerHTML = renderMarkdown(node.content);
             } else {
                 modalHero.hidden = true;
@@ -689,6 +715,7 @@ function nodePoint(node) {
     renderPins();
     renderFilters();
     renderNodeGrid();
+    hydrateCoverImages();
     setAdminMode(false);
     updateTourUI();
 }

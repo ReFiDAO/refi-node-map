@@ -61,20 +61,20 @@ ReFi Sicilia is deeply interwoven with its bioregion, working to revitalize loca
 - **What’s Coming:** ReFi Sicilia envisions creating a land trust to secure agricultural land for young farmers, allowing them to steward it sustainably without ownership barriers.
 - **Why It Matters:** This initiative addresses land access challenges while ensuring long-term preservation and regeneration of Sicily’s landscapes.
 
-![Gb71LCMWYAAyq4k.jpeg](nodes/rifai-sicilia/images/rifai-sicilia2.jpeg)
+![Gb71LCMWYAAyq4k.jpeg](nodes/rifai-sicilia/images/rifai-sicilia12.jpeg)
 
-![GN7i8JQW8AEf2CC.jpeg](nodes/rifai-sicilia/images/rifai-sicilia6.jpeg)
+![GN7i8JQW8AEf2CC.jpeg](nodes/rifai-sicilia/images/rifai-sicilia16.jpeg)
 
-![GXHqSvGWYAAsm_f.jpeg](nodes/rifai-sicilia/images/rifai-sicilia8.jpeg)
+![GXHqSvGWYAAsm_f.jpeg](nodes/rifai-sicilia/images/rifai-sicilia18.jpeg)
 
-![GbE4qdcXsAAxd04.jpeg](nodes/rifai-sicilia/images/rifai-sicilia4.jpeg)
+![GbE4qdcXsAAxd04.jpeg](nodes/rifai-sicilia/images/rifai-sicilia14.jpeg)
 
-![Gb71LEAXQAA9QTC.jpeg](nodes/rifai-sicilia/images/rifai-sicilia3.jpeg)
+![Gb71LEAXQAA9QTC.jpeg](nodes/rifai-sicilia/images/rifai-sicilia13.jpeg)
 
-![GG2LN4yXsAA2LIi.jpeg](nodes/rifai-sicilia/images/rifai-sicilia5.jpeg)
+![GG2LN4yXsAA2LIi.jpeg](nodes/rifai-sicilia/images/rifai-sicilia15.jpeg)
 
-![GJbHwwnXoAA0wlU.jpeg](nodes/rifai-sicilia/images/rifai-sicilia1.png)
+![GJbHwwnXoAA0wlU.jpeg](nodes/rifai-sicilia/images/rifai-sicilia11.png)
 
-![GPDWqAHXsAAmSOz.jpeg](nodes/rifai-sicilia/images/rifai-sicilia7.jpeg)
+![GPDWqAHXsAAmSOz.jpeg](nodes/rifai-sicilia/images/rifai-sicilia17.jpeg)
 
-![GZ14ZTEXoAgFRx3.jpeg](nodes/rifai-sicilia/images/rifai-sicilia9.jpeg)
+![GZ14ZTEXoAgFRx3.jpeg](nodes/rifai-sicilia/images/rifai-sicilia19.jpeg)

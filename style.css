@@ -431,6 +431,7 @@ a {
 }
 
 .pin__dot {
+    display: inline-block;
     width: 14px;
     height: 14px;
     border-radius: 999px;

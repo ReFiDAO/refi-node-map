@@ -34,18 +34,18 @@ ReFi Medellín stands out for its unwavering commitment to diverse, engaging act
 - **What’s Next:** The node plans to offer more courses focused on how blockchain intersects with regenerative efforts, equipping members with the knowledge to innovate and lead.
 - **Why It Matters:** By bridging technology and sustainability, these classes will cultivate a new generation of changemakers committed to both community and environmental well-being.
 
-![Gd4m8-jbEAAcbvY.jpeg](nodes/refi-medellin/images/refi-medellin3.jpeg)
+![Gd4m8-jbEAAcbvY.jpeg](nodes/refi-medellin/images/refi-medellin7.jpeg)
 
-![Gd4nBk1aEAEzG-w.jpeg](nodes/refi-medellin/images/refi-medellin4.jpeg)
+![Gd4nBk1aEAEzG-w.jpeg](nodes/refi-medellin/images/refi-medellin7.jpeg)
 
-![GRKnx6CWsAEHXvJ.png](nodes/refi-medellin/images/refi-medellin7.png)
+![GRKnx6CWsAEHXvJ.png](nodes/refi-medellin/images/refi-medellin8.png)
 
-![GeYYSqxXEAAcKQ8.jpeg](nodes/refi-medellin/images/refi-medellin6.jpeg)
+![GeYYSqxXEAAcKQ8.jpeg](nodes/refi-medellin/images/refi-medellin7.jpeg)
 
-![Gb4ejbKasAAoow_.jpeg](nodes/refi-medellin/images/refi-medellin2.jpeg)
+![Gb4ejbKasAAoow_.jpeg](nodes/refi-medellin/images/refi-medellin7.jpeg)
 
-![GdhcEAOWEAAuI9Z.jpeg](nodes/refi-medellin/images/refi-medellin5.jpeg)
+![GdhcEAOWEAAuI9Z.jpeg](nodes/refi-medellin/images/refi-medellin7.jpeg)
 
-![GWf4Yn8XAAAR7P1.jpeg](nodes/refi-medellin/images/refi-medellin9.jpeg)
+![GWf4Yn8XAAAR7P1.jpeg](nodes/refi-medellin/images/refi-medellin10.jpeg)
 
-![GRPbrPJXwAAVTgF.jpeg](nodes/refi-medellin/images/refi-medellin8.jpeg)
+![GRPbrPJXwAAVTgF.jpeg](nodes/refi-medellin/images/refi-medellin10.jpeg)
