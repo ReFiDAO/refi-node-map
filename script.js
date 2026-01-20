@@ -19,7 +19,7 @@ function clamp(value, min, max) {
     return Math.max(min, Math.min(max, value));
 }
 
-const MAP_Y_OFFSET_PCT = 7.5;
+const MAP_Y_OFFSET_PCT = 0;
 
 function latLngToPct(lat, lng) {
     const x = ((Number(lng) + 180) / 360) * 100;
@@ -301,9 +301,11 @@ function main() {
 
     let isAdmin = false;
     let pickMode = false;
+    let dragState = null;
     const state = { activeNodeId: null };
     const filters = { continent: "All" };
     const tour = { active: false, ids: [], idx: 0 };
+    let cardObserver = null;
 
     function updateModalOpenState(open) {
         document.body.classList.toggle("is-modal-open", !!open);
@@ -339,7 +341,7 @@ function main() {
         if (isAdmin) {
             mapHud.hidden = !pickMode;
         }
-        btnPickPin.textContent = pickMode ? "Picking..." : "Pick pin";
+        btnPickPin.textContent = "Copy coordinates";
     }
 
     function updateHudFromEvent(e) {
@@ -351,6 +353,45 @@ function main() {
         hudX.textContent = xPct;
         hudY.textContent = yPct;
         return { xPct, yPct };
+    }
+
+    function mapCoordinatesText() {
+        return nodes
+            .map((node) => {
+                const { xPct, yPct } = nodePoint(node);
+                return `${node.name || node.id}: xPct:${Number(xPct).toFixed(1)}, yPct:${Number(yPct).toFixed(1)}`;
+            })
+            .join("\n");
+    }
+
+    function startDrag(pin, e) {
+        const rect = mapPins.getBoundingClientRect();
+        dragState = { pin, rect };
+        pin.classList.add("is-dragging");
+        e.preventDefault();
+    }
+
+    function updateDrag(e) {
+        if (!dragState) return;
+        const { pin, rect } = dragState;
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        const xPct = clamp(x, 0, 100);
+        const yPct = clamp(y, 0, 100);
+        pin.style.left = `${xPct}%`;
+        pin.style.top = `${yPct}%`;
+        const node = nodes.find((n) => n.id === pin.dataset.nodeId);
+        if (node) {
+            node.mapCoordinates = `xPct:${xPct.toFixed(1)}, yPct:${yPct.toFixed(1)}`;
+        }
+        hudX.textContent = xPct.toFixed(1);
+        hudY.textContent = yPct.toFixed(1);
+    }
+
+    function endDrag() {
+        if (!dragState) return;
+        dragState.pin.classList.remove("is-dragging");
+        dragState = null;
     }
 
     async function copyToClipboard(text) {
@@ -457,6 +498,29 @@ function nodePoint(node) {
                 `;
             })
             .join("");
+    }
+
+    function observeNodeCards() {
+        const cards = Array.from(nodeGrid.querySelectorAll(".node-card"));
+        if (cardObserver) {
+            cardObserver.disconnect();
+        }
+        if (!("IntersectionObserver" in window)) {
+            cards.forEach((card) => card.classList.add("is-visible"));
+            return;
+        }
+        cardObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        cardObserver.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.2 }
+        );
+        cards.forEach((card) => cardObserver.observe(card));
     }
 
     function hydrateCoverImages() {
@@ -613,20 +677,33 @@ function nodePoint(node) {
     mapPins.addEventListener("click", async (e) => {
         const pin = e.target.closest(".pin[data-node-id]");
         if (pin) {
-            openNode(pin.dataset.nodeId);
+            if (!isAdmin) openNode(pin.dataset.nodeId);
             return;
         }
         if (!isAdmin) return;
         const coords = updateHudFromEvent(e);
         const text = `xPct:${coords.xPct}, yPct:${coords.yPct}`;
-        if (pickMode) {
-            adminCoords.textContent = text;
-            setHudStatus(`Picked: ${text}`);
-            setPickMode(false);
-            return;
-        }
         const ok = await copyToClipboard(text);
         setHudStatus(ok ? `Copied: ${text}` : `Copy blocked — use: ${text}`);
+    });
+
+    mapPins.addEventListener("mousedown", (e) => {
+        if (!isAdmin) return;
+        const pin = e.target.closest(".pin[data-node-id]");
+        if (!pin) return;
+        startDrag(pin, e);
+    });
+
+    window.addEventListener("mousemove", (e) => {
+        if (!isAdmin) return;
+        if (dragState) {
+            updateDrag(e);
+        }
+    });
+
+    window.addEventListener("mouseup", () => {
+        if (!isAdmin) return;
+        endDrag();
     });
 
     mapPins.addEventListener("mousemove", (e) => {
@@ -657,6 +734,7 @@ function nodePoint(node) {
         filters.continent = button.dataset.filter || "All";
         renderFilters();
         renderNodeGrid();
+        observeNodeCards();
     });
 
     modalClose.addEventListener("click", closeModal);
@@ -699,10 +777,11 @@ function nodePoint(node) {
 
     btnPickPin.addEventListener("click", () => {
         if (!isAdmin) return;
-        setPickMode(!pickMode);
-        if (pickMode) {
-            adminCoords.textContent = "Click on the map to capture coordinates.";
-        }
+        const text = mapCoordinatesText();
+        copyToClipboard(text).then((ok) => {
+            adminCoords.textContent = ok ? "Copied node coordinates." : "Copy blocked — check clipboard.";
+            setHudStatus(ok ? "Copied all coordinates." : "Copy blocked — check clipboard.");
+        });
     });
 
     if (scrollIndicator && mapSection) {
@@ -715,6 +794,7 @@ function nodePoint(node) {
     renderPins();
     renderFilters();
     renderNodeGrid();
+    observeNodeCards();
     hydrateCoverImages();
     setAdminMode(false);
     updateTourUI();

@@ -322,8 +322,9 @@ a {
     margin-top: 0;
     background-color: var(--color-bg-deep);
     z-index: 20;
-    padding-bottom: 6rem;
+    padding-bottom: 8rem;
     padding-top: 0.25rem;
+    overflow: visible;
 }
 
 .map-section::before {
@@ -379,7 +380,7 @@ a {
 
 .pin {
     position: absolute;
-    transform: translate(calc(-50% + var(--pin-offset-x, 0px)), calc(-50% + var(--pin-offset-y, 0px)));
+    transform: translate(calc(-50% + var(--pin-offset-x, 0px)), calc(-360% + var(--pin-offset-y, 0px)));
     pointer-events: auto;
     cursor: pointer;
     border: 0;
@@ -389,6 +390,10 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.pin.is-dragging {
+    cursor: grabbing;
 }
 
 .pin:hover,
@@ -792,7 +797,9 @@ a {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
-    transition: transform 0.2s, border-color 0.2s;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.2s;
     cursor: pointer;
     overflow: hidden;
 }
@@ -800,6 +807,19 @@ a {
 .node-card:hover {
     transform: translateY(-4px);
     border-color: rgba(113, 227, 186, 0.4);
+}
+
+.node-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .node-card {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
 }
 
 .node-card__media {
@@ -1108,6 +1128,60 @@ a {
     background-color: #050709;
     text-align: center;
     overflow: hidden;
+}
+
+.join-inline {
+    position: relative;
+    padding: 0;
+    margin-top: 5rem;
+}
+
+.join-inline__content {
+    position: relative;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.join-inline__glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 520px;
+    height: 620px;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(69, 113, 225, 0.22), transparent 65%);
+    opacity: 0.55;
+    pointer-events: none;
+}
+
+.join-inline__title {
+    position: relative;
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.join-inline__text {
+    position: relative;
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    margin-top: 0.75rem;
+}
+
+.join-inline__button {
+    position: relative;
+    margin-top: 1.75rem;
+}
+
+@media (min-width: 768px) {
+    .join-inline__content {
+        padding: 3.5rem 3rem;
+    }
+
+    .join-inline__title {
+        font-size: 3.25rem;
+    }
 }
 
 .footer p {
