@@ -1,1 +1,0 @@
-![image.png](nodes/refi-colombia/images/cover.png)

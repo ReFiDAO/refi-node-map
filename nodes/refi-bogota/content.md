@@ -1,1 +1,0 @@
-![IMG_8491.jpg](nodes/refi-bogota/images/cover.jpg)
